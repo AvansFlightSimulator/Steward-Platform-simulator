@@ -20,7 +20,8 @@ def parse_json_with_leading_zeros(json_str):
     return json.loads(corrected_json)
 
 def receive_data():
- # Example Json {"positions" : [206, 207, 202, 191, 191, 203], "speeds" : [300, 300, 300, 300, 300, 300]}
+ # Example Json { "positions" : [206, 207, 202, 191, 191, 203], "speeds" : [300, 300, 300, 300, 300, 300] }
+ # PLC is very picky about the json, so it needs to be axactly 89 characters and values need to be 3 digits
     data = s.recv(89 * 20)
     print(f"Received {data.decode()!r}")
     

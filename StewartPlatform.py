@@ -107,8 +107,6 @@ class StewartPlatform:
         pwm_high_time = pwm_period * duty_cycle 
         actuation_step = np.array([l / steps for l in linear_distance]) # actuation step
 
-        print("linear_distance: ", linear_distance)
-
         # Actuate the linear actuators
         for i in range(steps):
             # Read the pwm signal
@@ -226,14 +224,14 @@ class StewartPlatform:
 
 
         # reset the position
-        # self.reset_position()
-        # cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
-        # for i in range (100):
-        #     p.stepSimulation()
-        #     time.sleep(1./240.)
-        #     cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
+        self.reset_position()
+        cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
+        for i in range (100):
+            p.stepSimulation()
+            time.sleep(1./240.)
+            cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
         
-        # print(cubePos,cubeOrn)
+        print(cubePos,cubeOrn)
         # Stop recording the simulation
         if simulation:
             p.stopStateLogging(logging_id)
