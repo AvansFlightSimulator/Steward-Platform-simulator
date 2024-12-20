@@ -1,0 +1,2704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.68024 -1.4149 0.026006"
+        rpy="0 0 0" />
+      <mass
+        value="8.1743" />
+      <inertia
+        ixx="2.3867"
+        ixy="0.0012133"
+        ixz="-1.163E-05"
+        iyy="2.3853"
+        iyz="-6.2917E-06"
+        izz="4.7628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Xonder_1">
+    <inertial>
+      <origin
+        xyz="4.0581E-09 1.1102E-15 0.034"
+        rpy="0 0 0" />
+      <mass
+        value="0.056342" />
+      <inertia
+        ixx="1.6014E-05"
+        ixy="6.1062E-11"
+        ixz="-9.0738E-19"
+        iyy="2.7464E-05"
+        iyz="6.1062E-11"
+        izz="1.6014E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xonder_1_joint"
+    type="revolute">
+    <origin
+      xyz="0.49551 -2.0953 0.10657"
+      rpy="1.2911 -0.41982 0.11654" />
+    <parent
+      link="base_link" />
+    <child
+      link="Xonder_1" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="onderaktuator_1">
+    <inertial>
+      <origin
+        xyz="-0.046341 0.24999 0.034776"
+        rpy="0 0 0" />
+      <mass
+        value="1.8654" />
+      <inertia
+        ixx="0.058489"
+        ixy="-0.0045785"
+        ixz="7.4943E-05"
+        iyy="0.005697"
+        iyz="7.6664E-05"
+        izz="0.062948" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="onderaktuator_1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.034 0 0.034"
+      rpy="-1.5708 1.5558 -1.5708" />
+    <parent
+      link="Xonder_1" />
+    <child
+      link="onderaktuator_1" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="stangaktuator_1">
+    <inertial>
+      <origin
+        xyz="1.9212E-07 -2.0663E-07 -0.17446"
+        rpy="0 0 0" />
+      <mass
+        value="0.27817" />
+      <inertia
+        ixx="0.0068049"
+        ixy="-8.1426E-11"
+        ixz="-1.5965E-09"
+        iyy="0.0068049"
+        iyz="3.7643E-09"
+        izz="2.2188E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stangaktuator_1_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0.6141 0.034"
+      rpy="1.5708 0.17904 -3.1416" />
+    <parent
+      link="onderaktuator_1" />
+    <child
+      link="stangaktuator_1" />
+    <axis
+      xyz="0 0 1" />
+      <limit
+      lower="0"
+      upper="0.4"
+      effort="3000"
+      velocity="100" />
+  </joint>
+  <link
+    name="lager_1">
+    <inertial>
+      <origin
+        xyz="-7.02949809472386E-10 9.83808590149238E-11 0.00761130965278722"
+        rpy="0 0 0" />
+      <mass
+        value="0.217501495703173" />
+      <inertia
+        ixx="0.000106880183994852"
+        ixy="5.69256203837754E-06"
+        ixz="-7.96059898704768E-13"
+        iyy="9.55271032351514E-05"
+        iyz="-5.01418969448789E-12"
+        izz="0.000156046844227139" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lager_1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.13525"
+      rpy="0 0 -1.3682" />
+    <parent
+      link="stangaktuator_1" />
+    <child
+      link="lager_1" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  /</joint>
+  <link
+    name="Xboven_1">
+    <inertial>
+      <origin
+        xyz="-4.05809563730486E-09 3.21964677141295E-15 4.05807443204509E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.056342036825042" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="-6.10624437311296E-11"
+        ixz="-9.43594703241291E-19"
+        iyy="2.74639311273774E-05"
+        iyz="-6.10624437891513E-11"
+        izz="1.60143282288171E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xboven_1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.058926"
+      rpy="1.5558 0 1.9642" />
+    <parent
+      link="lager_1" />
+    <child
+      link="Xboven_1" />
+    <axis
+      xyz="-1 0 0" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="U_1">
+    <inertial>
+      <origin
+        xyz="6.02921734760287E-09 0.023965209376635 0.0339999979976191"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691680669253734" />
+      <inertia
+        ixx="3.71147088047297E-05"
+        ixy="-1.20932779349426E-11"
+        ixz="1.11394230980637E-10"
+        iyy="3.75575627876219E-05"
+        iyz="-1.46442444150324E-11"
+        izz="2.10363555468146E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="U_1_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.034"
+      rpy="-3.1416 0 2.9798" />
+    <parent
+      link="Xboven_1" />
+    <child
+      link="U_1" />
+    <axis
+      xyz="0 0 -1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="schijfA_1">
+    <inertial>
+      <origin
+        xyz="2.55351295663786E-14 0.000500000000002943 2.57571741713036E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581685" />
+      <inertia
+        ixx="1.47161295786626E-06"
+        ixy="1.27584337680179E-20"
+        ixz="1.21760986167806E-21"
+        iyy="2.94251787928822E-06"
+        iyz="-9.97910690983973E-21"
+        izz="1.47161295786626E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfA_1_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.043 0.034"
+      rpy="0 -1.0472 0" />
+    <parent
+      link="U_1" />
+    <child
+      link="schijfA_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Xonder_2">
+    <inertial>
+      <origin
+        xyz="4.0581E-09 5.2736E-15 0.034"
+        rpy="0 0 0" />
+      <mass
+        value="0.056342" />
+      <inertia
+        ixx="1.6014E-05"
+        ixy="6.1062E-11"
+        ixz="-8.9627E-19"
+        iyy="2.7464E-05"
+        iyz="6.1062E-11"
+        izz="1.6014E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xonder_2_joint"
+    type="revolute">
+    <origin
+      xyz="0.86543 -2.0953 0.10657"
+      rpy="1.2911 0.41982 -0.11654" />
+    <parent
+      link="base_link" />
+    <child
+      link="Xonder_2" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="onderaktuator_2">
+    <inertial>
+      <origin
+        xyz="-0.046341 0.24999 0.034776"
+        rpy="0 0 0" />
+      <mass
+        value="1.8654" />
+      <inertia
+        ixx="0.058489"
+        ixy="-0.0045785"
+        ixz="7.4943E-05"
+        iyy="0.005697"
+        iyz="7.6664E-05"
+        izz="0.062948" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="onderaktuator_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.034 0 0.034"
+      rpy="-1.5708 1.5558 -1.5708" />
+    <parent
+      link="Xonder_2" />
+    <child
+      link="onderaktuator_2" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="stangaktuator_2">
+    <inertial>
+      <origin
+        xyz="1.72486930072324E-07 -1.96902141258448E-07 -0.299038704100568"
+        rpy="0 0 0" />
+      <mass
+        value="0.278174502298026" />
+      <inertia
+        ixx="0.0068049433318464"
+        ixy="-2.96509255950234E-11"
+        ixz="-5.13956181653891E-10"
+        iyy="0.00680493657762046"
+        iyz="3.10662214676297E-09"
+        izz="2.2187951082588E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stangaktuator_2_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0.73868 0.034"
+      rpy="-1.5708 -0.76994 0" />
+    <parent
+      link="onderaktuator_2" />
+    <child
+      link="stangaktuator_2" />
+    <axis
+      xyz="0 0 1" />
+      <limit
+      lower="0"
+      upper="0.4"
+      effort="3000"
+      velocity="100" />
+  </joint>
+  <link
+    name="lager_2">
+    <inertial>
+      <origin
+        xyz="-0.00999183010513915 -0.000404247342965847 0.0182782662747604"
+        rpy="0 0 0" />
+      <mass
+        value="0.217501675303535" />
+      <inertia
+        ixx="0.000106880294746943"
+        ixy="5.69254546634325E-06"
+        ixz="-1.48653047116627E-11"
+        iyy="9.55271481040208E-05"
+        iyz="-5.67937013488674E-11"
+        izz="0.000156046891311603" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lager_2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.01 0"
+      rpy="0 0 1.5304" />
+    <parent
+      link="stangaktuator_2" />
+    <child
+      link="lager_2" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="Xboven_2">
+    <inertial>
+      <origin
+        xyz="4.05805611336518E-09 -4.05814182258268E-09 -2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250421" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="-9.3766547261051E-19"
+        ixz="-6.10624437899984E-11"
+        iyy="1.60143282288171E-05"
+        iyz="-6.10624437957158E-11"
+        izz="2.74639311273775E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xboven_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0099918 -0.00040423 0.069593"
+      rpy="0 0.01503 0.3934" />
+    <parent
+      link="lager_2" />
+    <child
+      link="Xboven_2" />
+    <axis
+      xyz="0 -1 0" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="U_2">
+    <inertial>
+      <origin
+        xyz="2.61259263112379E-08 0.0239652383880494 0.0340000368298488"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691682401521007" />
+      <inertia
+        ixx="3.71147964075179E-05"
+        ixy="-2.84775010422909E-11"
+        ixz="7.68039761402846E-11"
+        iyy="3.75576101812513E-05"
+        iyz="-3.98070937442932E-11"
+        izz="2.10364227950237E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="U_2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.034 0 0"
+      rpy="1.5708 0.16175 1.5708" />
+    <parent
+      link="Xboven_2" />
+    <child
+      link="U_2" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="schijfA_2">
+    <inertial>
+      <origin
+        xyz="3.00870439673417E-14 0.000499999999999501 1.11022302462516E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581637" />
+      <inertia
+        ixx="1.47161295786609E-06"
+        ixy="-1.1392965371846E-20"
+        ixz="-2.13412598038681E-22"
+        iyy="2.94251787928787E-06"
+        iyz="2.39551505395357E-21"
+        izz="1.47161295786609E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfA_2_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.044 0.034"
+      rpy="3.1416 -1.0472 0" />
+    <parent
+      link="U_2" />
+    <child
+      link="schijfA_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="schijfB_2">
+    <inertial>
+      <origin
+        xyz="9.88098491916389E-15 0.000500000000000167 -4.44089209850063E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581637" />
+      <inertia
+        ixx="1.47161295786609E-06"
+        ixy="1.13098084085577E-16"
+        ixz="-8.81774532981528E-22"
+        iyy="2.94251787928787E-06"
+        iyz="-4.28192624891586E-17"
+        izz="1.47161295786608E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfB_2_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="schijfA_2" />
+    <child
+      link="schijfB_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="frameboven">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="36.8998176475609" />
+      <inertia
+        ixx="6.29272527053402"
+        ixy="-0.0181678062908566"
+        ixz="0.0159470428036254"
+        iyy="4.30612404555482"
+        iyz="1.54563382792871"
+        izz="2.82773098148651" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/frameboven.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/frameboven.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frameboven_joint"
+    type="fixed">
+    <origin
+      xyz="1.1141 0.015293 -0.86404"
+      rpy="1.4706 0.053055 -2.7888" />
+    <parent
+      link="schijfB_2" />
+    <child
+      link="frameboven" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="schijfB_1">
+    <inertial>
+      <origin
+        xyz="-5.77315972805081E-15 0.000500000000000167 -6.21724893790088E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581677" />
+      <inertia
+        ixx="1.47161295786623E-06"
+        ixy="1.37907551724841E-20"
+        ixz="1.00585162486448E-21"
+        iyy="2.94251787928815E-06"
+        iyz="-1.17128774737509E-20"
+        izz="1.47161295786622E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfB_1_joint"
+    type="fixed">
+    <origin
+      xyz="2.0845 0.87685 0.46064"
+      rpy="1.2096 -0.087962 -2.1135" />
+    <parent
+      link="frameboven" />
+    <child
+      link="schijfB_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="schijfB_4">
+    <inertial>
+      <origin
+        xyz="-8.88178419700125E-15 0.000499999999952316 -1.28785870856518E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581672" />
+      <inertia
+        ixx="1.47161295786621E-06"
+        ixy="7.36687053539726E-21"
+        ixz="1.27054942088145E-21"
+        iyy="2.94251787928811E-06"
+        iyz="-7.19978005166155E-21"
+        izz="1.4716129578662E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfB_4_joint"
+    type="fixed">
+    <origin
+      xyz="1.3709 -0.35921 0.46064"
+      rpy="1.835 0.26398 0.070466" />
+    <parent
+      link="frameboven" />
+    <child
+      link="schijfB_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="schijfB_6">
+    <inertial>
+      <origin
+        xyz="1.46549439250521E-14 0.000500000000000389 2.67563748934663E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581627" />
+      <inertia
+        ixx="1.47161295786605E-06"
+        ixy="-1.1964340379967E-20"
+        ixz="-4.2351647362715E-22"
+        iyy="2.9425178792878E-06"
+        iyz="5.73070728376738E-21"
+        izz="1.47161295786604E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfB_6_joint"
+    type="fixed">
+    <origin
+      xyz="2.2576 0.57704 0.46064"
+      rpy="1.6776 -0.35626 -2.0785" />
+    <parent
+      link="frameboven" />
+    <child
+      link="schijfB_6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="schijfB_5">
+    <inertial>
+      <origin
+        xyz="2.4980018054066E-15 0.000500000000000167 -1.66533453693773E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581641" />
+      <inertia
+        ixx="1.4716129578661E-06"
+        ixy="-8.28338665410602E-21"
+        ixz="1.4492204331929E-21"
+        iyy="2.9425178792879E-06"
+        iyz="-3.17637355220363E-21"
+        izz="1.4716129578661E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfB_5_joint"
+    type="fixed">
+    <origin
+      xyz="1.7171 -0.35921 0.46064"
+      rpy="1.835 -0.26398 -0.070466" />
+    <parent
+      link="frameboven" />
+    <child
+      link="schijfB_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="schijfB_3">
+    <inertial>
+      <origin
+        xyz="-9.99200722162641E-15 0.000499999999999279 -2.93098878501041E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581625" />
+      <inertia
+        ixx="1.47161295786604E-06"
+        ixy="-1.33937084784586E-20"
+        ixz="1.27054942088145E-21"
+        iyy="2.94251787928778E-06"
+        iyz="6.53803556161913E-21"
+        izz="1.47161295786604E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfB_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfB_3_joint"
+    type="fixed">
+    <origin
+      xyz="0.83033 0.57704 0.46064"
+      rpy="1.6776 0.35626 2.0785" />
+    <parent
+      link="frameboven" />
+    <child
+      link="schijfB_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Xonder_3">
+    <inertial>
+      <origin
+        xyz="4.05809696957249E-09 -1.11022302462516E-15 0.0339999959419035"
+        rpy="0 0 0" />
+      <mass
+        value="0.056342036825042" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="6.1062443742988E-11"
+        ixz="-9.36394923189629E-19"
+        iyy="2.74639311273774E-05"
+        iyz="6.10624438243032E-11"
+        izz="1.6014328228817E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xonder_3_joint"
+    type="revolute">
+    <origin
+      xyz="1.3722 -1.1934 0.129"
+      rpy="2.0056 -0.25483 0.5236" />
+    <parent
+      link="base_link" />
+    <child
+      link="Xonder_3" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="onderaktuator_3">
+    <inertial>
+      <origin
+        xyz="0.0396021359321774 0.247508283084692 -0.00857882691181078"
+        rpy="0 0 0" />
+      <mass
+        value="1.86541059754337" />
+      <inertia
+        ixx="0.061442854268015"
+        ixy="-0.00914772176431719"
+        ixz="-0.000939900476778596"
+        iyy="0.00735160076624045"
+        iyz="-0.00528747120190645"
+        izz="0.058339922897334" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="onderaktuator_3_joint"
+    type="revolute">
+    <origin
+      xyz="0.034 0 0.034"
+      rpy="-1.5708 -1.409 1.5708" />
+    <parent
+      link="Xonder_3" />
+    <child
+      link="onderaktuator_3" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="stangaktuator_3">
+    <inertial>
+      <origin
+        xyz="1.99965038749639E-07 -1.95932982061109E-07 -0.338747803027267"
+        rpy="0 0 0" />
+      <mass
+        value="0.278174388160801" />
+      <inertia
+        ixx="0.00680492570319809"
+        ixy="-7.62999207543601E-11"
+        ixz="-1.8767196511556E-09"
+        iyy="0.00680491891571611"
+        iyz="2.81764835615323E-09"
+        izz="2.21879496027051E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stangaktuator_3_joint"
+    type="prismatic">
+    <origin
+      xyz="0.12534 0.76814 0.045699"
+      rpy="1.5519 0.65262 2.9683" />
+    <parent
+      link="onderaktuator_3" />
+    <child
+      link="stangaktuator_3" />
+    <axis
+      xyz="0 0 1" />
+      <limit
+      lower="0"
+      upper="0.4"
+      effort="3000"
+      velocity="100" />
+  </joint>
+  <link
+    name="lager_3">
+    <inertial>
+      <origin
+        xyz="-0.00625903536798766 -0.00779900598272498 -0.0214307160108012"
+        rpy="0 0 0" />
+      <mass
+        value="0.217501483070319" />
+      <inertia
+        ixx="0.00010688017697327"
+        ixy="5.69256342166431E-06"
+        ixz="4.74296033085289E-12"
+        iyy="9.55271046555032E-05"
+        iyz="1.63801228016922E-11"
+        izz="0.000156046837314054" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lager_3_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.01 0"
+      rpy="0 0 0.67629" />
+    <parent
+      link="stangaktuator_3" />
+    <child
+      link="lager_3" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="Xboven_3">
+    <inertial>
+      <origin
+        xyz="4.05763955768634E-09 6.09896577685731E-11 4.05809807979551E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250424" />
+      <inertia
+        ixx="1.6016916281612E-05"
+        ixy="-1.72120546396361E-07"
+        ixz="-9.17721836227853E-13"
+        iyy="2.74613430745829E-05"
+        iyz="6.10555470876526E-11"
+        izz="1.60143282288173E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xboven_3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.006259 -0.007799 0.029884"
+      rpy="1.5708 0 -2.7482" />
+    <parent
+      link="lager_3" />
+    <child
+      link="Xboven_3" />
+    <axis
+      xyz="0 0 -1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="U_3">
+    <inertial>
+      <origin
+        xyz="-2.3036748952876E-08 0.0239652399553396 0.0339999609890491"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691682464622873" />
+      <inertia
+        ixx="3.71147965435714E-05"
+        ixy="2.53707498828416E-11"
+        ixz="7.66384472414083E-11"
+        iyy="3.75576086268656E-05"
+        iyz="3.03218187826852E-11"
+        izz="2.10364251818792E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="U_3_joint"
+    type="revolute">
+    <origin
+      xyz="0.033996 0.00051099 0"
+      rpy="-1.5708 -1.409 1.5858" />
+    <parent
+      link="Xboven_3" />
+    <child
+      link="U_3" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="schijfA_3">
+    <inertial>
+      <origin
+        xyz="6.21724893790088E-15 0.000500000000001055 2.1094237467878E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581625" />
+      <inertia
+        ixx="1.47161295786604E-06"
+        ixy="-1.32878293600518E-20"
+        ixz="3.07049443379684E-21"
+        iyy="2.94251787928778E-06"
+        iyz="7.94093388050907E-21"
+        izz="1.47161295786604E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfA_3_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.043 0.034"
+      rpy="0 1.0472 0" />
+    <parent
+      link="U_3" />
+    <child
+      link="schijfA_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Xonder_4">
+    <inertial>
+      <origin
+        xyz="4.05809652548328E-09 1.0769163338864E-14 0.0339999959419079"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250426" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="6.10624437717872E-11"
+        ixz="-9.14795583034644E-19"
+        iyy="2.74639311273777E-05"
+        iyz="6.10624437262591E-11"
+        izz="1.60143282288173E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xonder_4_joint"
+    type="revolute">
+    <origin
+      xyz="1.1935 -0.86938 0.10128"
+      rpy="1.136 -0.25483 0.5236" />
+    <parent
+      link="base_link" />
+    <child
+      link="Xonder_4" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="onderaktuator_4">
+    <inertial>
+      <origin
+        xyz="-0.0411337412926387 0.247258250437425 -0.00857883844072727"
+        rpy="0 0 0" />
+      <mass
+        value="1.86541190786414" />
+      <inertia
+        ixx="0.0614909110917856"
+        ixy="0.00900450352666603"
+        ixz="0.000789715243940566"
+        iyy="0.00730358016572687"
+        iyz="-0.00531197918510372"
+        izz="0.058339961955597" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="onderaktuator_4_joint"
+    type="revolute">
+    <origin
+      xyz="0.034 0 0.034"
+      rpy="1.5708 -1.409 -1.5708" />
+    <parent
+      link="Xonder_4" />
+    <child
+      link="onderaktuator_4" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="stangaktuator_4">
+    <inertial>
+      <origin
+        xyz="1.94963892585776E-07 -2.11818474871173E-07 -0.175762019207903"
+        rpy="0 0 0" />
+      <mass
+        value="0.278174378676583" />
+      <inertia
+        ixx="0.0068049452112121"
+        ixy="-9.01910545217117E-11"
+        ixz="-1.84620097427376E-09"
+        iyy="0.00680493850323008"
+        iyz="3.85162448361509E-09"
+        izz="2.21879178679808E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stangaktuator_4_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.099099 0.6073 0.043249"
+      rpy="1.5384 -1.0883 -2.9511" />
+    <parent
+      link="onderaktuator_4" />
+    <child
+      link="stangaktuator_4" />
+    <axis
+      xyz="0 0 1" />
+      <limit
+      lower="0"
+      upper="0.4"
+      effort="3000"
+      velocity="100" />
+  </joint>
+  <link
+    name="lager_4">
+    <inertial>
+      <origin
+        xyz="-2.28975044480606E-09 2.43712228176207E-09 -0.001204535813145"
+        rpy="0 0 0" />
+      <mass
+        value="0.217501483163805" />
+      <inertia
+        ixx="0.00010688017746121"
+        ixy="5.69256294254417E-06"
+        ixz="-5.81917940076964E-12"
+        iyy="9.55271049058665E-05"
+        iyz="-2.4674925732827E-11"
+        izz="0.000156046837681744" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lager_4_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.14276"
+      rpy="0 0 1.2427" />
+    <parent
+      link="stangaktuator_4" />
+    <child
+      link="lager_4" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="Xboven_4">
+    <inertial>
+      <origin
+        xyz="-4.05809941206314E-09 0.000109841869041449 -1.65508687755E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250424" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="6.10624438205445E-11"
+        ixz="9.27395198125052E-19"
+        iyy="2.74639311273776E-05"
+        iyz="-6.10624438298089E-11"
+        izz="1.60143282288173E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xboven_4_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.05"
+      rpy="1.5858 0 1.9642" />
+    <parent
+      link="lager_4" />
+    <child
+      link="Xboven_4" />
+    <axis
+      xyz="1 0 0" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="U_4">
+    <inertial>
+      <origin
+        xyz="2.60076415958821E-08 0.0239652472102714 0.0340000285234168"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691681982520595" />
+      <inertia
+        ixx="3.7114782075393E-05"
+        ixy="-5.04668914807366E-11"
+        ixz="8.98531533841595E-11"
+        iyy="3.75575797219563E-05"
+        iyz="-6.87942139146695E-11"
+        izz="2.10364065358853E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="U_4_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00010984 -0.034002"
+      rpy="0 0 -0.16175" />
+    <parent
+      link="Xboven_4" />
+    <child
+      link="U_4" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="schijfA_4">
+    <inertial>
+      <origin
+        xyz="1.33226762955019E-15 0.000499999999997391 2.88657986402541E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581672" />
+      <inertia
+        ixx="1.47161295786621E-06"
+        ixy="-8.89384594617015E-21"
+        ixz="-3.17637355220363E-22"
+        iyy="2.94251787928811E-06"
+        iyz="-2.83226641738157E-21"
+        izz="1.47161295786621E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfA_4_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0429999999999974 0.0340000000000068"
+      rpy="0 1.04719755119652 0" />
+    <parent
+      link="U_4" />
+    <child
+      link="schijfA_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Xonder_5">
+    <inertial>
+      <origin
+        xyz="4.05809630343867E-09 9.76996261670138E-15 0.0339999959419031"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250423" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="6.10624438535258E-11"
+        ixz="-9.37241956136883E-19"
+        iyy="2.74639311273776E-05"
+        iyz="6.10624438048214E-11"
+        izz="1.60143282288172E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xonder_5_joint"
+    type="revolute">
+    <origin
+      xyz="0.12662 -0.88144 0.12371"
+      rpy="1.8505 0.41982 1.1637" />
+    <parent
+      link="base_link" />
+    <child
+      link="Xonder_5" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="onderaktuator_5">
+    <inertial>
+      <origin
+        xyz="-0.0463411886215642 0.249986948197703 0.0347759123967549"
+        rpy="0 0 0" />
+      <mass
+        value="1.86541202623272" />
+      <inertia
+        ixx="0.0584894971751281"
+        ixy="-0.00457854821231517"
+        ixz="7.49442424738556E-05"
+        iyy="0.00569701951189276"
+        iyz="7.66594475344899E-05"
+        izz="0.0629479410685052" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="onderaktuator_5_joint"
+    type="revolute">
+    <origin
+      xyz="0.034 0 0.034"
+      rpy="1.5708 -1.5558 -1.5708" />
+    <parent
+      link="Xonder_5" />
+    <child
+      link="onderaktuator_5" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="stangaktuator_5">
+    <inertial>
+      <origin
+        xyz="1.75130262070056E-07 -2.05694856814098E-07 -0.300060127975425"
+        rpy="0 0 0" />
+      <mass
+        value="0.278174242795763" />
+      <inertia
+        ixx="0.0068049358601258"
+        ixy="-4.64146770063484E-11"
+        ixz="-6.17519129414949E-10"
+        iyy="0.00680492912802032"
+        iyz="3.5925436148176E-09"
+        izz="2.21879364471694E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stangaktuator_5_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0.7397 0.034"
+      rpy="-1.5708 1.5533 0" />
+    <parent
+      link="onderaktuator_5" />
+    <child
+      link="stangaktuator_5" />
+    <axis
+      xyz="0 0 1" />
+      <limit
+      lower="0"
+      upper="0.4"
+      effort="3000"
+      velocity="100" />
+  </joint>
+  <link
+    name="lager_5">
+    <inertial>
+      <origin
+        xyz="0.000410382918921592 0.0099915734038275 0.0172570641122382"
+        rpy="0 0 0" />
+      <mass
+        value="0.217501488445703" />
+      <inertia
+        ixx="0.000106880179896209"
+        ixy="5.6925627169493E-06"
+        ixz="-3.29692583421416E-12"
+        iyy="9.55271054844135E-05"
+        iyz="3.30059828192929E-12"
+        izz="0.000156046840585406" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lager_5_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.01 0"
+      rpy="0 0 -3.1005" />
+    <parent
+      link="stangaktuator_5" />
+    <child
+      link="lager_5" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="Xboven_5">
+    <inertial>
+      <origin
+        xyz="4.05763611599497E-09 6.09854389210795E-11 -4.058104130511E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250423" />
+      <inertia
+        ixx="1.60169126111356E-05"
+        ixy="-1.71998476680854E-07"
+        ixz="-9.17723611291273E-13"
+        iyy="2.74613467450592E-05"
+        iyz="6.10555417331603E-11"
+        izz="1.60143282288172E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xboven_5_joint"
+    type="revolute">
+    <origin
+      xyz="0.00041038 0.0099916 0.068571"
+      rpy="1.5708 0 -2.7482" />
+    <parent
+      link="lager_5" />
+    <child
+      link="Xboven_5" />
+    <axis
+      xyz="0 0 -1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="U_5">
+    <inertial>
+      <origin
+        xyz="-2.12566814150605E-09 0.0239652144781018 0.0339999983527971"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691680568694601" />
+      <inertia
+        ixx="3.71147033186243E-05"
+        ixy="1.06001791382212E-11"
+        ixz="1.14855490131275E-10"
+        iyy="3.75575533782162E-05"
+        iyz="6.47901289088591E-12"
+        izz="2.10363509122831E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="U_5_joint"
+    type="revolute">
+    <origin
+      xyz="0.033996 0.00051099 0"
+      rpy="-1.5708 -1.409 1.5858" />
+    <parent
+      link="Xboven_5" />
+    <child
+      link="U_5" />
+    <axis
+      xyz="0 0 -1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="schijfA_5">
+    <inertial>
+      <origin
+        xyz="1.55431223447522E-15 0.000500000000000278 -6.43929354282591E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0042482186658164" />
+      <inertia
+        ixx="1.4716129578661E-06"
+        ixy="-8.76149704816167E-21"
+        ixz="-6.88214269644119E-22"
+        iyy="2.94251787928789E-06"
+        iyz="5.55865371635635E-21"
+        izz="1.47161295786609E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfA_5_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0429999999999997 0.0339999999999993"
+      rpy="-3.14159265358968 1.04719755119668 3.14159265358952" />
+    <parent
+      link="U_5" />
+    <child
+      link="schijfA_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Xonder_6">
+    <inertial>
+      <origin
+        xyz="4.05810463011136E-09 9.54791801177635E-15 0.0339999959419031"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250425" />
+      <inertia
+        ixx="1.60143282288173E-05"
+        ixy="6.10624437908454E-11"
+        ixz="-9.13101517140136E-19"
+        iyy="2.74639311273777E-05"
+        iyz="6.10624438679254E-11"
+        izz="1.60143282288173E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xonder_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xonder_6_joint"
+    type="revolute">
+    <origin
+      xyz="-0.058341 -1.2018 0.12371"
+      rpy="1.8505 -0.41982 0.93066" />
+    <parent
+      link="base_link" />
+    <child
+      link="Xonder_6" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="onderaktuator_6">
+    <inertial>
+      <origin
+        xyz="0.0463411739603124 0.249986992262757 0.0332240898663568"
+        rpy="0 0 0" />
+      <mass
+        value="1.86541128079666" />
+      <inertia
+        ixx="0.0584894809092295"
+        ixy="0.00457854631234544"
+        ixz="7.49443593238905E-05"
+        iyy="0.0056970200339165"
+        iyz="-7.66594116394181E-05"
+        izz="0.0629479272042214" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/onderaktuator_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="onderaktuator_6_joint"
+    type="revolute">
+    <origin
+      xyz="-0.034 0 0.034"
+      rpy="1.5708 1.5558 1.5708" />
+    <parent
+      link="Xonder_6" />
+    <child
+      link="onderaktuator_6" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="stangaktuator_6">
+    <inertial>
+      <origin
+        xyz="1.79868898442237E-07 -1.96639883209837E-07 -0.340837572755451"
+        rpy="0 0 0" />
+      <mass
+        value="0.27817434748845" />
+      <inertia
+        ixx="0.00680492326270412"
+        ixy="-3.98721557073184E-11"
+        ixz="-7.28220931738077E-10"
+        iyy="0.00680491651093548"
+        iyz="2.7212980315621E-09"
+        izz="2.21879385829544E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/stangaktuator_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stangaktuator_6_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0.78048 0.034"
+      rpy="1.5708 1.2161 -3.1416" />
+    <parent
+      link="onderaktuator_6" />
+    <child
+      link="stangaktuator_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.4"
+      effort="3000"
+      velocity="100" />
+  </joint>
+  <link
+    name="lager_6">
+    <inertial>
+      <origin
+        xyz="0.00918815121814573 -0.00394687565779428 -0.0235204437196399"
+        rpy="0 0 0" />
+      <mass
+        value="0.217501684225934" />
+      <inertia
+        ixx="0.000106880301476339"
+        ixy="5.69254277140265E-06"
+        ixz="1.28993747124394E-11"
+        iyy="9.55271509879494E-05"
+        iyz="5.19761401378673E-11"
+        izz="0.000156046899675735" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/lager_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lager_6_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.01 0"
+      rpy="0 0 -1.1651" />
+    <parent
+      link="stangaktuator_6" />
+    <child
+      link="lager_6" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="Xboven_6">
+    <inertial>
+      <origin
+        xyz="-4.05809819081782E-09 -6.0989879813178E-11 -4.05763855848562E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0563420368250425" />
+      <inertia
+        ixx="1.60143282288172E-05"
+        ixy="6.10555470656297E-11"
+        ixz="-9.17722565099704E-13"
+        iyy="2.74613430702804E-05"
+        iyz="-1.72120689434286E-07"
+        izz="1.60169162859145E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/Xboven_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Xboven_6_joint"
+    type="revolute">
+    <origin
+      xyz="0.0091881 -0.0039469 0.027794"
+      rpy="1.5708 0 1.9642" />
+    <parent
+      link="lager_6" />
+    <child
+      link="Xboven_6" />
+    <axis
+      xyz="-1 0 0" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="U_6">
+    <inertial>
+      <origin
+        xyz="2.59236936361873E-08 0.0239652389686342 0.0340000367475308"
+        rpy="0 0 0" />
+      <mass
+        value="0.0691682399935604" />
+      <inertia
+        ixx="3.71147960895398E-05"
+        ixy="-2.83753046634731E-11"
+        ixz="7.70337450851422E-11"
+        iyy="3.75576093332134E-05"
+        iyz="-3.92691170964164E-11"
+        izz="2.10364227127612E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/U_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="U_6_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.00051099 0.033996"
+      rpy="-3.1268 -0.0024205 -2.9799" />
+    <parent
+      link="Xboven_6" />
+    <child
+      link="U_6" />
+    <axis
+      xyz="0 0 1" />
+      <limit upper="0.785398" lower="-0.785398" effort="100" velocity="100"/>
+  </joint>
+  <link
+    name="schijfA_6">
+    <inertial>
+      <origin
+        xyz="7.54951656745106E-15 0.000500000000001277 9.99200722162641E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00424821866581627" />
+      <inertia
+        ixx="1.47161295786605E-06"
+        ixy="-1.37907551724841E-20"
+        ixz="2.48815928255951E-21"
+        iyy="2.9425178792878E-06"
+        iyz="4.6983858793012E-21"
+        izz="1.47161295786605E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem2/meshes/schijfA_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="schijfA_6_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0430000000000115 0.0339999999999832"
+      rpy="0 -1.04719755119668 0" />
+    <parent
+      link="U_6" />
+    <child
+      link="schijfA_6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
